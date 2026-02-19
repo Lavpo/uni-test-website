@@ -51,11 +51,10 @@ a:hover {
 .top .menubtn, .top .mobileMenu{
   display: none;
 }
-.top .mobileMenu {
-  color: white;
-  text-decoration: none;
+.top .menubtn img{
+  width: 50px;
+  height: 50px;
 }
-
 .hamMenu {
   display: flex;
   gap: 15px; 
@@ -98,12 +97,26 @@ a:hover {
   .top .menubtn{
     display: block;
     position: static;
-    padding-left: 40px;
-    background-image: url("/src/icons/hamburger.png");
+    border: none;
+    background-color: transparent;
+    margin: 0;
   }
   .top .mobileMenu{
     flex-direction: column;
     align-items: center;
+    background-color: rgb(95, 77, 77);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .top .mobileMenu a:hover{
+    background-color: white;
+    transition: 0.3ms ease;
+  }
+  .top .mobileMenu a{
+    outline: 1px solid black;
+    width: 300px;
+    text-align: center;
   }
 }
 
