@@ -1,4 +1,25 @@
 :root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  padding-inline: 30px;
+  width: 100%;
+  max-width: 1280px;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 20px; 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -6,15 +27,6 @@
   color-scheme: light dark;
   color: rgba(55, 39, 39, 0.87);
   background-color: #a9a9a9;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font-size: 32px; 
 }
 
 a, a:visited {
@@ -26,23 +38,81 @@ a:hover {
   color: purple;
 }
 
-.wrapper {
-  width: 100%;
-  max-width: 1280px;
-  justify-content: center;
-  margin: auto;
+.top{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.top {
+.top .logo{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+.top .menubtn, .top .mobileMenu{
+  display: none;
+}
+.top .mobileMenu {
+  color: white;
+  text-decoration: none;
+}
+
+.hamMenu {
   display: flex;
-  justify-content: end;
   gap: 15px; 
 }
 
+.top label {
+  position: absolute;
+}
 
+
+
+
+/* ------------------ */
+/* ----- Medias ----- */
+/* ------------------ */
+
+@media (max-width: 800px){
+  
+  .wrapper{
+    padding-inline: 50px;
+  }
+  .top{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hamMenu{
+    display: none;
+  }
+  .logo1 .hamMenu{
+    height: 500px;
+  }
+  .top .logo1{
+    display: flex;
+    justify-content: space-between;
+  }
+  .top .logo1 label::before{
+    position: absolute;
+    content: "menu";
+  }
+  .top .menubtn{
+    display: block;
+    position: static;
+    padding-left: 40px;
+    background-image: url("/src/icons/hamburger.png");
+  }
+  .top .mobileMenu{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px){
+  
+  .wrapper{
+    padding-inline: 50px;
+  }
+}
 
 
 
