@@ -115,15 +115,9 @@ a:hover {
   }
   .top .mobileMenu a{
     outline: 1px solid black;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
-  }
-}
-
-@media (max-width: 420px){
-  
-  .wrapper{
-    padding-inline: 50px;
   }
 }
 
