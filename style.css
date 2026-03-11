@@ -5,26 +5,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* FONTS */
+@font-face{
+  font-family: "Roboto-bold";
+  src: url(src/fonts/Roboto/Roboto_Bold.ttf) format('truetype');
+}
+
+@font-face{
+  font-family: "Praise";
+  src: url(src/fonts/Praise/Praise-Regular.ttf) format('truetype');
+}
+
+
 .wrapper {
+  font-family: "Roboto-bold";
+  font-size: 24px;
+
+  color: black;
+
   box-sizing: border-box;
-  padding-inline: 30px;
   width: 100%;
-  max-width: 1280px;
   justify-content: center;
-  margin: auto;
+  padding: 0 5rem 5rem 5rem;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
 }
-.Bg-image{
-  width: 100%;
-  height: 400px;
-  background-image: url("src/bg/bg1.png");
-  object-fit: fill;
-  /* background-color: red; */
-}
 
 body {
+  margin: 0;
   box-sizing: border-box;
   font-size: 20px; 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -32,8 +41,7 @@ body {
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(55, 39, 39, 0.87);
-  background-color: #a9a9a9;
+  background-color: white;
 }
 
 a, a:visited {
@@ -45,8 +53,59 @@ a:hover {
   color: purple;
 }
 
+
+
+
+/* Top Menu */
+
 .top{
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  display: space-between;
+  justify-content: space-between;
+  background-color: darkorange;
+  align-items: center;
+
+  padding: 0.5rem 5.5rem 0.5rem 5.5rem;
+}
+
+.bottom{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  display: space-between;
+  justify-content: space-between;
+  background-color: darkorange;
+  align-items: center;
+  color: white;
+
+  padding: 0.5rem 5.5rem 0.5rem 5.5rem;
+}
+
+.bottom .item1, .bottom .item2{
+  display: flex; 
+  flex-direction: column;
+}
+
+.bottom .item1 h2::before{
+  content: "📗";
+}
+
+
+.bottom .links{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+
+
+.top .Menu{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -70,15 +129,162 @@ a:hover {
   position: absolute;
 }
 
-/* text costumisation */
+
+
+
+/* text customization */
 .center .multiline{
   white-space: pre-line;
 }
 
-#S3{
+/* Rest of the page */
+
+.TopPage{
+  width: 100%;
+  
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 800px;
+  background: radial-gradient(white, #FFCD3C);
+  background-size: 100% 100%; 
+  background-position: center;
 }
+
+.TopPage h1{ 
+  font-size: 48px;
+  word-spacing: 20%;
+  font-family: "Praise";
+  font-weight: normal;
+}
+
+.TopPage img{
+  width: 250px;
+}
+
+h1{
+  font-size: 48px;
+}
+
+#S1, #S2, #S3, #S4, #S5{
+  padding: 2rem;
+}
+ 
+
+/* Section 1 */
+#S1 {
+  display: flex;
+  flex-direction: column;
+  background-image: url(src/images/img1.png);
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#S1 .item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#S1 p {
+  width: 40%;
+}
+#S1 iframe{
+  align-self: end;
+}
+
+
+/* Section 2 */
+#S2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffc83d; 
+}
+
+#S2 h1{
+  align-self: end;
+}
+
+#S2 p{
+  align-self: start;
+  margin-bottom: 50px;
+}
+
+#S2 .row{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Section 3 */
+#S3{
+  height: 800px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-image: url(src/images/img2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#S3 .item1{
+  height: 800px;
+
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+#S3 .sub{
+  height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+#S3 button{
+  border: none;
+  font-size: 48px;
+  background-color: orange;
+  color: white;
+
+  padding: 4rem;  
+}
+
+
+#S3 button:hover{
+  background-color: white;
+  color: orange;
+}
+#S3 .item2{
+  display: flex;
+}
+#S3 img{
+  width: 700px;
+  background-color: white;
+}
+
+
+/* Section 4 */
+#S4 {
+  background-color: #B0DB72;
+}
+#S4 h1{
+  text-align: end;
+}
+#S4 h2{
+  font-size: 24px;
+}
+#S4 p{
+  font-weight: 100;
+}
+
+#S4 p::before{
+  content: "▶️";
+}
+
 
 #S5 .span{
   display: flex;
@@ -94,22 +300,19 @@ a:hover {
 @media screen and (max-width: 800px){
   
   .wrapper{
-    padding-inline: 50px;
+    padding-inline: 1rem;
   }
-  .top{
-    flex-direction: column;
-    justify-content: center;
-  }
-  .top .logo1{
+  .top {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    padding-inline: 1.5rem
   }
   .top .logo1 label::before{
     position: absolute;
     content: "menu";
   }
   .top .menubtn{
-    display: block;
+    display: flex;
     position: static;
     border: none;
     background-color: transparent;
@@ -118,7 +321,7 @@ a:hover {
 
 
   .top .mobileMenu{
-    display: none;
+    display: none;   
     flex-direction: column;
     align-items: center;
     background-color: rgb(95, 77, 77);
@@ -132,72 +335,8 @@ a:hover {
     transition: 0.3ms ease;
   }
   .top .mobileMenu a{
-    outline: 1px solid black;
     max-width: 300px;
     width: 100%;
     text-align: center;
   }
 }
-
-
-
-
-/* Some junk down bellow */
-
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  color: black;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  justify-content: center;
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */

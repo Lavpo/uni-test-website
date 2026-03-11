@@ -5,129 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+      (function () { //Immediately Invoked Function Expression (LIFE)
+        const key = "Warning seen";
+        if (sessionStorage.getItem(key) === "1") return;
+        
+        let ok = confirm("Do you accept this warning?\n");
+
+        while (!ok){
+          ok = confirm("Do you accept this warning?\n");
+        };
+
+        sessionStorage.setItem(key, "1");
+      })();
+    </script>
   </head>
   <body>
     <!-- #app contains basic text and buttons with what counter js works-->
     <!-- <div id="app"></div>  -->
     <!-- <script type="module" src="/src/main.js"></script> -->
-    <div class="wrapper">
-      
-      <!-- I could have used table nor list for this, but nah it's fine -->
-      <nav class="top">
-        <div class="logo1">
-          <img src="src/images/cat1.jpg" class="logo">
-          <button class="menubtn" id="menu-btn" onclick="menuToggler()">
-            <img src="src/icons/hamburger.png">
-          </button>
+    <nav class="top">
+        <div class = "Menu">
+          <div class="logo1">
+            <img src="src/icons/book-icon.png" class="logo">
+          </div>
+          <div class = "Hamburger">
+            <button class="menubtn" onclick="menuToggler()">
+              <img src="src/icons/hamburger.png">
+            </button>
+          </div>
         </div>
-        <div class="mobileMenu" id="jsmobileMenu">
-          <a href="#S1"> Про ярмарок </a>
-          <a href="#S2"> Відділи ярмарку </a>
-          <a href="#S3"> Відгуки </a>
-          <a href="#S4"> Оформити заявку </a>
-          <a href="#S5"> Зв'язатися </a>
+
+        <div class="mobileMenu" id = "jsmobileMenu">
+          <a href="#S1"> Локація </a>
+          <a href="#S2"> Програма </a>
+          <a href="#S3"> Пошук </a>
+          <a href="#S4"> FAQ </a>
+          <a href="#S5"> Благодійність </a>
         </div>
         <script src="src/scripts/menuHandler.js"></script>
-      </nav>
-      <div class="Bg-image"></div>
+    </nav>
+
+    <div class="wrapper">
+      <!-- I could have used table nor list for this, but nah it's fine -->
+      <div class="TopPage">
+        <h1> Bookfest 2026 </h1>
+        <img src="src/images/img5.png" alt="Book image">
+      </div>
       <div class="center">
         <div id="S1">
-          
-          <h1>Книжковий ярмарок Львова</h1>
-          <p>
-            Книжковий ярмарок Львова я одним з найбільших на найбільш захоплюючих ярмарків
-            по всій Україні.  
-          </p>
-          <p>
-            Отримай можливість зустріти своїх улюблених авторів, відкривай нові ще небачені видавництва, купуй 
-            книги зі захоплючими цінами та при бажанні приходь на презентації, автограф-сесії й лекції.
-          </p>
-          <p>  
-            Це подія для всіх, хто любить читати і для тих, хто цим тільки цікавиться — від фанатів художньої літератури 
-            до тих, хто шукає корисну наукову літературу а також дитячі книги. На ярмарку буде 
-            багато стендів видавців, зона обміну книгами, тематичні заходи та 
-            активності для дітей.
-          </p>
+          <h1>Де нас знайти</h1>
+          <div class="item">
+            <p>
+            Подія відбувається за адресою: проспект Свободи 22, Львів, 
+            Львівська область, 79008.
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d382.47118964751826!2d24.027117800417262!3d49.84341168543196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add728ad6070b%3A0xdcbbb1a0fb007aa6!2z0L_RgNC-0YHQv9C10LrRgiDQodCy0L7QsdC-0LTQuCwgMjIsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1773252825299!5m2!1suk!2sua" width="650" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
         <div id="S2">
-          <h1>Цікаві події ярмарку</h1>
-          <p class="multiline">
-            1) Як обирати книги та сформувати читацьку звичку
-            Рівень: для всіх · Тривалість: 45 хв · Формат: лекція
-            
-            2) Письменницька майстерня: створюємо коротке оповідання
-            Рівень: початковий · 60 хв · практикум
-            
-            3) Редагування тексту: типові помилки та як їх уникати
-            Рівень: середній · 50 хв · лекція + Q&A
-            
-            4) Дитяча зона: читання казок і творчий майстер-клас
-            Для дітей 6–10 · 40 хв · активність
-            
-            5) Ілюстрація до книги: від ескізу до обкладинки
-            Для творчих · 60 хв · майстер-клас
-            
-            6) Як видати книгу: видавництва, самвидав і просування
-            Для авторів · 60 хв · лекція
-            
-            7) За конкретним часом і місцем перебування події можна дізнатись перейшовши 
-            за контактною інформацією ярмарку.
+          <h1>На вас чекають</h1>
+          <p>
+            тут повинен бути написаний текст Тадеєм.
           </p>
+          <div class="row">
+            <img src="src/images/img4.png">
+            <p>Тут написати щось особливе</p>
+          </div> 
         </div>
         <div id="S3">
-          <h1>Відгуки</h1>
-          <span class="Artem">
-            <img>
-            <p class="Review">
-              Чудовий Курс. Недавно тільки записався на нього, але після його проходження,
-              тепер я розумію всю суть того, як правильно обирати книги!!! Всім рекомендую!!!!!
-            </p>
-            <p class="Rating">Оцінка: 9</p> 
-          </span>
-          
-          <span class="Alina">
-            <img>
-            <p class="Review">
-              Давно я вже перебуваю у цьому товаристві, і кожен раз знаходять можливість 
-              здивувати мене чимось новим і водночас захоплюючим. Недавня лекція, яка стосувалася
-              впливу культури на суспільство і важливості підтримання цієї культури була просто
-              неймовірною!!!
-              <br>
-              Але, на жаль, без недоліків. Цукерки у вітальній були не смачні.
-            </p>
-            <p class="Rating">Оцінка: 8</p>
-          </span>
-          
-          <span class="Ostap">
-            <img>
-            <p class="Review">Мені сподобалось печиво яке давали на курсі</p>
-            <p class="Rating">Оцінка: 10</p>
-          </span>
-          
+          <div class="item1">
+            <h1>Знайди книгу для себе</h1>
+            
+            <div class="sub">
+              <p>тут має бути текст, який має закликати користувача натиснути на кнопку, 
+                яка має показати картинку випадкової книги.</p>
+              <button>Знайти цікавинку</button>
+            </div>
+          </div>
+          <div class="item2">
+            <img src="src/images/img6.png">
+          </div>
         </div>
         <div id="S4">
-          <h1>Оформити заявку</h1>
-          <p>
-            WIP
-          </p>
-        </div>
-        <div id="S5">
-          <h1>Зв'язатися</h1>
-          <div class="span">
-            <span class="Adress">
-            in my house
-            </span>
-
-            <span class="NumberOfTrust">
-              911 або (032) 223 07 70
-            </span>
-            
-            <span class="Support">
-              press this button -> "button" to get support
-            </span>
-          </div>
+          <h1>Виникли запитання?</h1>
+          <h2>Питання 1</h2>
+          <p>відповідь1</p> <br>
+          <h2>Питання 2</h2>
+          <p>відповідь2</p> <br>
+          <h2>Питання 3</h2>
+          <p>відповідь3</p> <br>
+          <h2>Питання 4</h2>
+          <p>відповідь4</p> <br>
         </div>
       </div>
     </div>
+
+    <div class="bottom">
+      <div class="item1">
+        <h2>Розважаємося і навчаємося разом</h2>
+        <p> Телефон: +380262366527 <br> Email: bookfest2026@gmail.com</p>
+      </div>
+
+      <div class="item2">
+        <div class="text">
+          <h2>Наші соц. мережі</h2>
+        </div>
+        <div class="links">
+          <a> <img src="src/icons/Social-Icon1.png"></a>
+          <a> <img src="src/icons/Social-Icon2.png"></a>
+          <a> <img src="src/icons/Social-Icon3.png"></a>
+        </div>
+      </div>
   </body>
 </html>
