@@ -63,7 +63,6 @@ a:hover {
   width: 100%;
   display: flex;
   flex-direction: row;
-  display: space-between;
   justify-content: space-between;
   background-color: darkorange;
   align-items: center;
@@ -75,20 +74,25 @@ a:hover {
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  display: space-between;
   justify-content: space-between;
   background-color: darkorange;
   align-items: center;
   color: white;
 
+  gap: 20px;
+
   padding: 0.5rem 5.5rem 0.5rem 5.5rem;
+}
+
+.bottom img{
+  max-width: 100px;
+  width: 100%;
 }
 
 .bottom .item1, .bottom .item2{
   display: flex; 
   flex-direction: column;
 }
-
 .bottom .item1 h2::before{
   content: "📗";
 }
@@ -167,9 +171,13 @@ a:hover {
 h1{
   font-size: 48px;
 }
+h2{
+  font-size: 32px;
+}
 
 #S1, #S2, #S3, #S4, #S5{
   padding: 2rem;
+  font-size: 24px;
 }
  
 
@@ -178,7 +186,9 @@ h1{
   display: flex;
   flex-direction: column;
   background-image: url(src/images/img1.png);
+  
   height: 700px;
+
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -186,12 +196,22 @@ h1{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  gap: 20px;
 }
 #S1 p {
   width: 40%;
 }
 #S1 iframe{
   align-self: end;
+  max-width: 650px; 
+  min-width: 200px;
+  
+  max-height: 500px;
+  min-height: 300px;
+
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -216,13 +236,20 @@ h1{
   justify-content: space-between;
 }
 
+#S2 img{
+  max-width: 50%;
+  min-width: 25%;  
+}
+
 
 /* Section 3 */
 #S3{
-  height: 800px;
+  height: auto ;
 
   display: flex;
   justify-content: space-between;
+
+  gap: 20px;
 
   background-image: url(src/images/img2.png);
   background-repeat: no-repeat;
@@ -233,11 +260,9 @@ h1{
 
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
 }
 #S3 .sub{
-  height: 600px;
-
   display: flex;
   flex-direction: column;
 
@@ -246,11 +271,11 @@ h1{
 
 #S3 button{
   border: none;
-  font-size: 48px;
+  font-size: 24px;
   background-color: orange;
   color: white;
 
-  padding: 4rem;  
+  padding: 1rem;  
 }
 
 
@@ -260,11 +285,27 @@ h1{
 }
 #S3 .item2{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  gap: 20px;
 }
 #S3 img{
-  width: 700px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+
   background-color: white;
 }
+
+#S3 button{
+  width: 100%;
+  max-width: 500px;
+}
+
+
 
 
 /* Section 4 */
@@ -274,23 +315,23 @@ h1{
 #S4 h1{
   text-align: end;
 }
-#S4 h2{
-  font-size: 24px;
-}
+
 #S4 p{
   font-weight: 100;
 }
-
 #S4 p::before{
   content: "▶️";
 }
 
 
-#S5 .span{
-  display: flex;
-  gap: 30px;
-  font-size: 16px;
+#S5{
+  background-image: url(src/images/img3.png);
   font-weight: 400;
+
+  height: 700px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ------------------ */
@@ -298,14 +339,28 @@ h1{
 /* ------------------ */
 
 @media screen and (max-width: 800px){
-  
+
+  h1 {
+    font-size: 24px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  .TopPage h1{
+    font-size: 48px;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
   .wrapper{
     padding-inline: 1rem;
   }
   .top {
     display: flex;
     flex-direction: column;
-    padding-inline: 1.5rem
+    padding-inline: 1.5rem;
   }
   .top .logo1 label::before{
     position: absolute;
@@ -318,7 +373,6 @@ h1{
     background-color: transparent;
     margin: 0;
   }
-
 
   .top .mobileMenu{
     display: none;   
@@ -339,4 +393,22 @@ h1{
     width: 100%;
     text-align: center;
   }
+
+  .bottom{
+    padding-inline: 1.5rem;
+    height: 250px;
+  }
+  .bottom img{
+    width: 25px;
+  }
+  .bottom .item2{
+    height: 100%;
+    justify-content: center;
+  }
+
+  #S1, #S2, #S3, #S4, #S5{
+    height: 400px;
+  }
+
 }
+
