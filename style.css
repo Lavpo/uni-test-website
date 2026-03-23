@@ -224,6 +224,7 @@ h2{
 
 #S2 h1{
   align-self: end;
+  margin: 10px;
 }
 
 #S2 p{
@@ -234,11 +235,16 @@ h2{
 #S2 .row{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 #S2 img{
-  max-width: 50%;
-  min-width: 25%;  
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+
+  background-color: white;
 }
 
 
@@ -337,7 +343,6 @@ h2{
 /* ------------------ */
 
 @media screen and (max-width: 800px){
-
   h1 {
     font-size: 24px;
   }
@@ -406,6 +411,16 @@ h2{
 
   #S1, #S2, #S3, #S4, #S5{
     height: 400px;
+  }
+
+  #S2 .row p{
+    font-size: 12px;
+  }
+
+  #S2 .row img{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
   }
 
 }
