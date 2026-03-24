@@ -26,8 +26,7 @@
   box-sizing: border-box;
   width: 100%;
   justify-content: center;
-  padding: 0 5rem 5rem 5rem;
-  margin-bottom: 40px;
+  padding: 0 5rem 0 5rem;
   display: flex;
   flex-direction: column;
 }
@@ -84,26 +83,27 @@ a:hover {
   padding: 0.5rem 5.5rem 0.5rem 5.5rem;
 }
 
-.bottom img{
-  max-width: 100px;
+.bottom .item1 img{
   width: 100%;
+  max-width: 100px;
+  height: 100px;
 }
 
-.bottom .item1, .bottom .item2{
+.bottom .item1{
+  display: flex; 
+  flex-direction: row;
+}
+
+.bottom .item2, .bottom .subitem{
   display: flex; 
   flex-direction: column;
 }
-.bottom .item1 h2::before{
-  content: "📗";
-}
-
 
 .bottom .links{
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
-
 
 
 .top .Menu{
@@ -175,10 +175,23 @@ h2{
   font-size: 32px;
 }
 
-#S1, #S2, #S3, #S4, #S5{
+#S2, #S3, #S4{
   padding: 2rem;
   font-size: 24px;
   min-height: 400px;
+  max-height: 1000px;
+}
+#S1{
+  padding: 2rem;
+  font-size: 24px;
+  max-height: 700px;
+  min-height: 600px;
+}
+
+#S5{
+  padding: 2rem;
+  font-size: 24px;
+  min-height: 650px;
   max-height: 1000px;
 }
  
@@ -189,8 +202,6 @@ h2{
   flex-direction: column;
   background-image: url(src/images/img1.png);
   
-  height: 700px;
-
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -327,8 +338,6 @@ h2{
   background-image: url(src/images/img3.png);
   font-weight: 400;
 
-  height: 700px;
-
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -342,7 +351,7 @@ h2{
     font-size: 24px;
   }
   h2{
-    font-size: 20px;
+    font-size: 16px;
   }
   .TopPage h1{
     font-size: 48px;
@@ -396,21 +405,35 @@ h2{
     padding-inline: 1.5rem;
     height: 250px;
   }
-  .bottom img{
-    width: 25px;
+  .bottom .item1 img{
+    width: 100%;
+    max-width: 50px;
+    height: 50px;
   }
   .bottom .item2{
     height: 100%;
     justify-content: center;
   }
+  .bottom .item2 img{
+    height: 50px;
+    width: 50px;
+  }
+  #S1{
+    max-height: 500px;
+    min-height: 300px;
+  }
 
   #S2 img{
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 
-  background-color: white;
-}
+    background-color: white;
+  }
 
+  #S5{
+    min-height: 400px;
+    max-height: 1000px;
+  }
 }
 
