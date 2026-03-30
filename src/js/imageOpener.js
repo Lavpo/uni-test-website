@@ -20,17 +20,12 @@
         if (sessionStorage.getItem(key) === "1") return;
 
         const images = [
-            "src/images/S3/hands1.jpg",
-            "src/images/S3/handg2.jpg",
-            "src/images/S3/hands3.jpg",
-            "src/images/S3/hands4.jpg",
-            "src/images/S3/hands5.jpg",
-            "src/images/S3/jesus.jpg",
-            "src/images/S3/buddha.jpg",
-            "src/images/S3/free.jpg",
-            "src/images/S3/Jesus2.jpg",
-            "src/images/S3/happyBDay.jpg",
-            "src/images/S3/smoke.jpg"
+            "src/images/books/book1.jpg",
+            "src/images/books/book2.jpg",
+            "src/images/books/book3.jpg",
+            "src/images/books/book4.jpg",
+            "src/images/books/book5.jpg",
+            "src/images/books/book6.jpg",
         ];
 
         if (!img) return;

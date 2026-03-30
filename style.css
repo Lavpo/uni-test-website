@@ -12,6 +12,12 @@
 }
 
 @font-face{
+  font-family: "Roboto_Regular";
+  src: url(src/fonts/Roboto/Roboto_Regular.ttf) format('truetype');
+}
+
+
+@font-face{
   font-family: "Praise";
   src: url(src/fonts/Praise/Praise-Regular.ttf) format('truetype');
 }
@@ -37,7 +43,6 @@ body {
   font-size: 20px; 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: light dark;
   background-color: white;
@@ -157,6 +162,11 @@ a:hover {
   background-position: center;
 }
 
+p {
+  font-family: "Roboto_Regular";
+  font-weight: 200; 
+}
+
 .TopPage h1{ 
   font-size: 48px;
   word-spacing: 20%;
@@ -184,8 +194,8 @@ h2{
 #S1{
   padding: 2rem;
   font-size: 24px;
-  max-height: 700px;
   min-height: 600px;
+  max-height: 900px;
 }
 
 #S5{
@@ -298,15 +308,13 @@ h2{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-
+  max-width: 500px;
+  width: 100%;
   gap: 20px;
 }
 #S3 img{
   width: 100%;
-  max-width: 500px;
   height: auto;
-
   background-color: white;
 }
 
@@ -326,9 +334,6 @@ h2{
   text-align: end;
 }
 
-#S4 p{
-  font-weight: 100;
-}
 #S4 p::before{
   content: "▶️";
 }
